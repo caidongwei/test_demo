@@ -1,0 +1,26 @@
+<svg height="209" preserveaspectratio="xMidYMin meet" viewbox="0 0 343 209" width="100%"
+                xmlns="http://www.w3.org/2000/svg">
+                <!-- 浮动点击区域指示 -->
+                <foreignobject x="0" y="0" width="343" height="209">
+                    <svg
+                        style="background-image: url(&quot;http://image2.crvole.com.cn/2020/11/20/335709260018467273685060.png&quot;);background-size: 100%;background-repeat: no-repeat;width: 100%;margin-left: auto;margin-right: auto;">
+                        <animate attributename="opacity" values="1;0;1" dur="1.5s" repeatcount="indefinite" />
+                        <set attributename="visibility" dur="0.0001s" attributetype="XML" begin="1.click" to="hidden"
+                            fill="freeze" restart="never">
+                        </set>
+                    </svg>
+                </foreignobject>
+                
+                <!-- 动画点击区域，通过id以及rect与图片大小一一定位 -->
+                <!-- keysplines比keyTimes少一个值,keyTimes为0-1浮点数，与values搭配,values有多少个值，keyTimes有几个值 -->
+                <!-- keyTimes与from,to搭配，则为两个值 -->
+                <rect id="1" x="0" y="0" width="100%" height="209" style="opacity: 0;text-align:center;"></rect>
+                <rect id="2" x="0" y="209" width="100%" height="115" style="opacity: 0;text-align:center;"></rect>
+
+                <animate attributename="height" fill="freeze" restart="never" calcmode="spline"
+                    keysplines="0.82 0 0.18 1.0; 0.42 0 0.58 1.0" keytimes="0;0.01;1" values="209;324;324" dur="20s"
+                    begin="1.click"></animate>
+                <animate attributename="height" fill="freeze" restart="never" calcmode="spline"
+                    keysplines="0.82 0 0.18 1.0; 0.42 0 0.58 1.0" keytimes="0;0.01;1" values="324;424;424" dur="20s"
+                    begin="2.click"></animate>                
+            </svg>
